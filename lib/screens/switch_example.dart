@@ -1,5 +1,5 @@
 import 'package:bloc_multiple_states/bloc/switch_examples/switch_event.dart';
-import 'package:bloc_multiple_states/bloc/switch_examples/switch_state.dart';
+import 'package:bloc_multiple_states/bloc/switch_examples/switch_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
