@@ -1,8 +1,9 @@
 import 'package:bloc_multiple_states/bloc/counter_bloc/counter_bloc.dart';
+import 'package:bloc_multiple_states/bloc/favourite/favourite_bloc.dart';
 import 'package:bloc_multiple_states/bloc/image_picker/image_picker_bloc.dart';
 import 'package:bloc_multiple_states/bloc/todo/to_do_bloc.dart';
-import 'package:bloc_multiple_states/screens/image_picker_screen.dart';
-import 'package:bloc_multiple_states/screens/to_do_screen.dart';
+import 'package:bloc_multiple_states/repository/favourite_repository.dart';
+import 'package:bloc_multiple_states/screens/favourite_app_screen.dart';
 import 'package:bloc_multiple_states/utils/image_picker_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,16 +34,20 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (_) => ToDoBloc(),
           ),
+          BlocProvider(
+            create: (_) => FavouriteBloc(FavouriteRepository()),
+          ),
         ],
         child: BlocProvider(
           create: (context) => SwitchBloc(),
           child: MaterialApp(
+              themeMode: ThemeMode.dark,
               title: 'Flutter Demo',
               theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                brightness: Brightness.dark,
                 useMaterial3: true,
               ),
-              home: const ToDoScreen()),
+              home: const FavouriteAppScreen()),
         ));
   }
 }
