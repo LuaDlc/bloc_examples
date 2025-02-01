@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 
 import 'package:bloc_multiple_states/model/favourite_item_model.dart';
 
-enum ListStatus { laoding, success, failure }
+import '../../utils/enums.dart';
 
 class FavouriteItemStates extends Equatable {
   final List<FavouriteItemModel> favouriteItemList;

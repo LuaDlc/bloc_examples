@@ -5,6 +5,8 @@ import 'package:bloc_multiple_states/model/favourite_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../utils/enums.dart';
+
 class FavouriteAppScreen extends StatefulWidget {
   const FavouriteAppScreen({super.key});
 
@@ -48,7 +50,7 @@ class _FavouriteAppScreenState extends State<FavouriteAppScreen> {
             builder: (context, state) {
           switch (state.listStatus) {
             case ListStatus.laoding:
-              return const CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             case ListStatus.failure:
               return const Text('somethinf wnt wrong');
             case ListStatus.success:

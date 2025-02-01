@@ -25,6 +25,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
         if (state.file == null) {
           return Center(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
                   onPressed: () {
