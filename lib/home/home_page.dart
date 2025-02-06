@@ -1,6 +1,7 @@
 import 'package:bloc_multiple_states/screens/counter_screen.dart';
 import 'package:bloc_multiple_states/screens/favourite_app_screen.dart';
 import 'package:bloc_multiple_states/screens/image_picker_screen.dart';
+import 'package:bloc_multiple_states/screens/login_screen.dart';
 import 'package:bloc_multiple_states/screens/posts_screen.dart';
 import 'package:bloc_multiple_states/screens/switch_example.dart';
 import 'package:bloc_multiple_states/screens/to_do_screen.dart';
@@ -95,6 +96,18 @@ class _HomePageState extends State<HomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const SwitchExample(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.login),
+              title: const Text('Login'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
                   ),
                 );
               },

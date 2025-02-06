@@ -9,6 +9,7 @@ import 'package:bloc_multiple_states/utils/image_picker_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'bloc/login/login_bloc.dart';
 import 'bloc/switch_examples/switch_bloc.dart';
 
 void main() {
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
             create: (_) => FavouriteBloc(FavouriteRepository()),
           ),
           BlocProvider(create: (_) => PostsBloc()),
+          BlocProvider(create: (_) => LoginBloc()),
         ],
         child: BlocProvider(
           create: (context) => SwitchBloc(),
