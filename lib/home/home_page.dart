@@ -1,11 +1,6 @@
-import 'package:bloc_multiple_states/screens/counter_screen.dart';
-import 'package:bloc_multiple_states/screens/favourite_app_screen.dart';
-import 'package:bloc_multiple_states/screens/image_picker_screen.dart';
-import 'package:bloc_multiple_states/screens/login_screen.dart';
-import 'package:bloc_multiple_states/screens/posts_screen.dart';
-import 'package:bloc_multiple_states/screens/switch_example.dart';
-import 'package:bloc_multiple_states/screens/to_do_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../config/routes_name.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -32,84 +27,49 @@ class _HomePageState extends State<HomePage> {
               leading: const Icon(Icons.home),
               title: const Text('Inicio'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const CounterScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.counterScreen);
               },
             ),
             ListTile(
               leading: const Icon(Icons.favorite_border_outlined),
               title: const Text('Meus favoritos'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const FavouriteAppScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.favouriteScreen);
               },
             ),
             ListTile(
               leading: const Icon(Icons.photo_album_rounded),
               title: const Text('Álbum'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ImagePickerScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.imagePickerScreen);
               },
             ),
             ListTile(
               leading: const Icon(Icons.email_sharp),
               title: const Text('Emails'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const PostsScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.postsScreen);
               },
             ),
             ListTile(
               leading: const Icon(Icons.today_outlined),
               title: const Text('ToDO'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ToDoScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.toDoScreen);
               },
             ),
             ListTile(
               leading: const Icon(Icons.notifications),
               title: const Text('Notificacoes'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SwitchExample(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.switchScreen);
               },
             ),
             ListTile(
               leading: const Icon(Icons.login),
               title: const Text('Login'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RoutesName.loginScreen);
               },
             ),
           ],
